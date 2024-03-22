@@ -1,0 +1,59 @@
+# Maintainer: HypherionSA <address@hidden>
+
+pkgname="lunawolf-hooks"
+pkgver=1.0
+pkgrel=0
+pkgdesc='Pacman hooks for LunaWolf filesystem'
+arch=('any')
+url="https://github.com/LunaWolfLinux/core-packages"
+license=('GPL3')
+source=(
+		'lunawolf-hooks.hook'
+		'lunawolf-os-release.hook'
+		'lunawolf-lsb-release.hook'
+		'lunawolf-pixmaps.hook'
+		'lunawolf-reboot-required.hook'
+		'lunawolf-hooks-runner'
+		'lunawolf-reboot-required'
+		'lunawolf.png'
+		'lunawolf.svg'
+		'lunawolf-logo.png'
+		'lunawolf-logo.svg'
+		'lunawolf-user.png'
+		'lunawolf-user.svg'
+)
+sha512sums=('03413fb9d39eb8a6afcbfacb48166f1fac55f345a5a037c3244c53b6fd2e557626969c244fa5c045bf4310d6ef9d8abcebbc0ab7df90e868a7cb47a1f4b7da69'
+            '27a54fc2e53e721b586581dc65383075294f2294b43c028c4d5fc7a543c7a40727b7da133eca545c2f503a4dd7916d81c28a4881baf7c22e08eaca9d629453e4'
+            '0120bc0a03ceeb1eaa8bcb4c96931ef39b24619447f3feebca83608e362df4a3c69cf5bd0faf806170fbfa81a70165f9375ac8ceca8888fac9447107664166be'
+            '147c139c00815be96c9b5bcaf4203d30d7e1d62fcd0512e0dea510d3ff8e611d1e5976048ce0771ab9385a7d55f96857eddefb97a90a2a13307515a132de09fd'
+            '8f19c120e8cf87262d095b5fe8325f18261d77d761e5ec91836c91ccc03f17183e9a06a2cd1618f56c8171f015a4a1e697cc907140e542c4eef155cf0616191b'
+            '6b760811129cd85a699aab2a8a798e1421ed486e87821e7e5b3870b859796489d09328ecdcbe573dfe4beb60c6a2cb7543420e6dc9f431fcf0da3215c5a6876e'
+            'eb490c28b236d72662711f1c9660a5d7d0a7d9b516e67fb3b53587c5517497bbd238b49df32fbe7876722d2604952488269e6c1d899b4837c870ec45abec3157'
+            '9834d35e743da1368f90adb645617d60ae60aac23bcd720ae50310d1b3ffaa8ea60c62938fc3a40e245ef4b1e7798a3a814e7cc10a3c8f6e3584832a1cb2f411'
+            '9437efb5657e9f2f528eea4d01f04dbc3fb421bf10bb9ad51e6fc131729fadf89d5338ce5030b1c030d5f6e0a4da691011112d26c31eb0302e9b528b7b6f1c9a'
+            '2cfb1efce7e7278f6353d2918561f7241324f68bc415774ae97a6d70772d97ffb274e14c0e7c480747d818e95ddd65cbf7f8df51266ecd533e6e0cc9866dbf6f'
+            '479f09693efa7f003ab4eb3a60fe965ff069cbf1e3e96820eea75868c50b120d7c7afcb5d33c953a39d47f9fa7c1b5a07cebdcad0e77cab4feae0db6c9f2e047'
+            '2cfb1efce7e7278f6353d2918561f7241324f68bc415774ae97a6d70772d97ffb274e14c0e7c480747d818e95ddd65cbf7f8df51266ecd533e6e0cc9866dbf6f'
+            '479f09693efa7f003ab4eb3a60fe965ff069cbf1e3e96820eea75868c50b120d7c7afcb5d33c953a39d47f9fa7c1b5a07cebdcad0e77cab4feae0db6c9f2e047')
+
+package() {
+	local hooks="$pkgdir"/usr/share/libalpm/hooks
+	local pixmaps="$pkgdir"/usr/share/pixmaps
+	local bin="$pkgdir"/usr/bin
+	
+	install -Dm 644 lunawolf-hooks.hook           	"$hooks"/lunawolf-hooks.hook
+	install -Dm 644 lunawolf-lsb-release.hook      "$hooks"/lunawolf-lsb-release.hook
+	install -Dm 644 lunawolf-os-release.hook       "$hooks"/lunawolf-os-release.hook
+	install -Dm 644 lunawolf-reboot-required.hook  "$hooks"/lunawolf-reboot-required.hook
+	install -Dm 644 lunawolf-pixmaps.hook  		"$hooks"/lunawolf-pixmaps.hook
+			    
+	install -Dm 755 lunawolf-hooks-runner         	"$bin"/lunawolf-hooks-runner
+	install -Dm 755 lunawolf-reboot-required       "$bin"/lunawolf-reboot-required
+			    
+	install -Dm 644 lunawolf.png       			"$pixmaps"/lunawolf.png
+	install -Dm 644 lunawolf.svg       			"$pixmaps"/lunawolf.svg
+	install -Dm 644 lunawolf-logo.png       		"$pixmaps"/lunawolf-logo.png
+	install -Dm 644 lunawolf-logo.svg       		"$pixmaps"/lunawolf-logo.svg
+	install -Dm 644 lunawolf-user.png       		"$pixmaps"/lunawolf-user.png
+	install -Dm 644 lunawolf-user.svg       		"$pixmaps"/lunawolf-user.svg
+}

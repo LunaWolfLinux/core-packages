@@ -1,0 +1,4 @@
+############### LunaWolf Mirrorlist ###############
+
+## Worldwide (Github)
+Server = https://packages.lunawolf.cc/$arch

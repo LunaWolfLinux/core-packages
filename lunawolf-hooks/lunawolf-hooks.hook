@@ -1,0 +1,12 @@
+## Maintained by HypherionSA
+
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = lunawolf-hooks
+
+[Action]
+Description = Updating LunaWolf System Configurations...
+When = PostTransaction
+Exec = /usr/bin/lunawolf-hooks-runner

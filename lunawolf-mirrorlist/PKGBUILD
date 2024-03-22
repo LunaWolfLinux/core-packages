@@ -1,0 +1,15 @@
+# Maintainer: HypherionSA <address@hidden>
+
+pkgname="lunawolf-mirrorlist"
+pkgver=1.0
+pkgrel=0
+pkgdesc='Lunawolf mirrorlist'
+arch=('any')
+url="https://github.com/LunaWolfLinux/core-packages"
+license=('GPL3')
+source=("$pkgname")
+sha512sums=('d5f0f8cec28c5e9ad8043424c5e62c18b27a71949fff5b8b44c780093f1e493d61b21c4a043f1d012b651f28a32c5d53243ace31585c34ff66219511dc999910')
+
+package() {
+	install -Dm 644 "$pkgname"  "$pkgdir"/etc/pacman.d/"$pkgname"
+}

@@ -1,0 +1,9 @@
+/calamares/calamares-*
+/grub/gnulib
+/grub/grub
+/grub/grub-extras
+/grub/unifont-*
+/packages
+*/pkg/*
+*.tar.zst
+/*/src/*

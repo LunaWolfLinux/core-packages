@@ -1,0 +1,12 @@
+## Maintained by HypherionSA
+
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = lsb-release
+
+[Action]
+Description = Updating LunaWolf LSB Configurations...
+When = PostTransaction
+Exec = /usr/bin/lunawolf-hooks-runner lsb-release
