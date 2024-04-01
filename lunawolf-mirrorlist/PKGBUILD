@@ -8,7 +8,7 @@ arch=('any')
 url="https://github.com/LunaWolfLinux/core-packages"
 license=('GPL3')
 source=("$pkgname")
-sha512sums=('d5f0f8cec28c5e9ad8043424c5e62c18b27a71949fff5b8b44c780093f1e493d61b21c4a043f1d012b651f28a32c5d53243ace31585c34ff66219511dc999910')
+sha512sums=('01ca34995a7f425e8e21f67d0dd1a18d151d14b96d1bed69baa418911947f44b9dd70e9afe3fbaeab99af27e51ff4beaa07f937e4da0b71bd4c59f3415cc74e8')
 
 package() {
 	install -Dm 644 "$pkgname"  "$pkgdir"/etc/pacman.d/"$pkgname"

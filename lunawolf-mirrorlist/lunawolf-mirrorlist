@@ -1,4 +1,7 @@
 ############### LunaWolf Mirrorlist ###############
 
 ## Worldwide (Github)
+Server = https://gitpackages.lunawolf.cc/$arch
+
+## Finland (First Dark Development)
 Server = https://packages.lunawolf.cc/$arch
