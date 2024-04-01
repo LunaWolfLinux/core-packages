@@ -2,7 +2,7 @@
 
 pkgname="lunawolf-mirrorlist"
 pkgver=1.0
-pkgrel=0
+pkgrel=1
 pkgdesc='Lunawolf mirrorlist'
 arch=('any')
 url="https://github.com/LunaWolfLinux/core-packages"
